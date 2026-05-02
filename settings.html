@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置 - Voidwryte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <button class="back-btn" onclick="Game.navigateTo('profile.html')">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="page-title">设置</h1>
+            <div class="page-actions">
+            </div>
+        </header>
+
+        <main class="page-content">
+            <div class="settings-container">
+                <section class="settings-section">
+                    <h3 class="settings-section-title">账户设置</h3>
+                    
+                    <div class="input-group">
+                        <label class="input-label">用户名</label>
+                        <input type="text" class="input-field" id="username-input" placeholder="请输入用户名" maxlength="20">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">头像选择</label>
+                        <div class="avatar-selector">
+                            <div class="avatar-option" data-avatar="code">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="laptop">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="gamepad">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="rocket">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="star">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="bolt">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="gem">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="ghost">
+                                <i class="fas fa-ghost"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="robot">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="avatar-option" data-avatar="cat">
+                                <i class="fas fa-cat"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h3 class="settings-section-title">声音设置</h3>
+                    
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <div class="settings-item-title">音效</div>
+                            <div class="settings-item-description">游戏操作音效</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="sound-toggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <div class="settings-item-title">背景音乐</div>
+                            <div class="settings-item-description">游戏背景音乐</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="music-toggle" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <div class="settings-item-title">音效音量</div>
+                        </div>
+                        <input type="range" class="volume-slider" id="sound-volume" min="0" max="100" value="80">
+                    </div>
+                    
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <div class="settings-item-title">音乐音量</div>
+                        </div>
+                        <input type="range" class="volume-slider" id="music-volume" min="0" max="100" value="50">
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h3 class="settings-section-title">游戏设置</h3>
+                    
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <div class="settings-item-title">显示新手引导</div>
+                            <div class="settings-item-description">每次进入游戏时显示引导</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="tutorial-toggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h3 class="settings-section-title">数据管理</h3>
+                    
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <div class="settings-item-title">重置游戏进度</div>
+                            <div class="settings-item-description">清除所有游戏数据，此操作不可撤销</div>
+                        </div>
+                        <button class="btn btn-secondary" id="reset-progress-btn" style="color: var(--danger-color); border-color: var(--danger-color);">
+                            <i class="fas fa-trash"></i> 重置
+                        </button>
+                    </div>
+                </section>
+
+                <section class="settings-section">
+                    <h3 class="settings-section-title">关于</h3>
+                    
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <div class="settings-item-title">游戏版本</div>
+                            <div class="settings-item-description">Voidwryte v1.0.0</div>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <div class="settings-item-title">技术支持</div>
+                            <div class="settings-item-description">使用 HTML5、CSS3、JavaScript 构建</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tutorialToggle = document.getElementById('tutorial-toggle');
+            const userData = GameStorage.getUserData();
+            tutorialToggle.checked = userData.settings.showTutorial;
+            
+            tutorialToggle.addEventListener('change', function() {
+                GameStorage.updateUserData({
+                    settings: { ...GameStorage.getUserData().settings, showTutorial: this.checked }
+                });
+            });
+            
+            initSettingsPage();
+        });
+    </script>
+</body>
+</html>

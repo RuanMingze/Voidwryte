@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新手引导 - Voidwryte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <button class="back-btn" id="guide-back">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="page-title">新手引导</h1>
+            <div class="page-actions">
+                <button class="icon-btn" id="guide-skip">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="page-content">
+            <div class="guide-container">
+                <div class="guide-progress">
+                    <div class="guide-step-indicator active"></div>
+                    <div class="guide-step-indicator"></div>
+                    <div class="guide-step-indicator"></div>
+                    <div class="guide-step-indicator"></div>
+                    <div class="guide-step-indicator"></div>
+                </div>
+
+                <div class="guide-step active" data-step="1">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <div class="guide-image-placeholder">
+                                <i class="fas fa-code"></i>
+                                <p>HTML标签知识</p>
+                            </div>
+                        </div>
+                        <h2 class="guide-title">HTML基础知识</h2>
+                        <div class="guide-description">
+                            <p>HTML（超文本标记语言）是构建网页的基础。每个HTML文档都有固定的结构：</p>
+                            <ul>
+                                <li><strong>!DOCTYPE声明</strong>：告诉浏览器使用哪个HTML版本</li>
+                                <li><strong>html标签</strong>：整个HTML文档的根标签</li>
+                                <li><strong>head标签</strong>：包含页面的元信息，如标题、样式等</li>
+                                <li><strong>body标签</strong>：包含页面的可见内容</li>
+                            </ul>
+                            <p><strong>重要：</strong>大多数HTML标签都是成对出现的，有开始标签和闭合标签（如<code>&lt;html&gt;...&lt;/html&gt;</code>），请确保标签正确闭合！</p>
+                            <p>在游戏中，你将通过拖拽这些HTML标签组件来学习网页制作。</p>
+                        </div>
+                        <div class="guide-demo">
+                            <div class="guide-demo-title">HTML文档结构</div>
+                            <div class="guide-demo-content">
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <span>DOCTYPE</span>
+                                </div>
+                                <i class="fas fa-arrow-down"></i>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-folder-open"></i>
+                                    <span>html</span>
+                                </div>
+                                <i class="fas fa-arrow-down"></i>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-brain"></i>
+                                    <span>head</span>
+                                </div>
+                                <i class="fas fa-arrow-down"></i>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-address-card"></i>
+                                    <span>body</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step" data-step="2">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <div class="guide-image-placeholder">
+                                <i class="fas fa-layer-group"></i>
+                                <p>head标签详解</p>
+                            </div>
+                        </div>
+                        <h2 class="guide-title">head标签的内容</h2>
+                        <div class="guide-description">
+                            <p>head标签包含页面的元信息，虽然在页面上看不到，但非常重要：</p>
+                            <ul>
+                                <li><strong>title标签</strong>：设置页面标题，显示在浏览器标签上</li>
+                                <li><strong>meta标签</strong>：设置字符编码等元信息</li>
+                                <li><strong>style标签</strong>：编写CSS样式</li>
+                                <li><strong>link标签</strong>：引入外部CSS文件</li>
+                                <li><strong>script标签</strong>：引入或编写JavaScript代码</li>
+                            </ul>
+                            <p>在关卡中，你将学会如何正确使用这些标签。</p>
+                        </div>
+                        <div class="guide-demo">
+                            <div class="guide-demo-title">常用head标签</div>
+                            <div class="guide-demo-content">
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-heading"></i>
+                                    <span>title</span>
+                                </div>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-keyboard"></i>
+                                    <span>meta</span>
+                                </div>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-palette"></i>
+                                    <span>style</span>
+                                </div>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-terminal"></i>
+                                    <span>script</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step" data-step="3">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <div class="guide-image-placeholder">
+                                <i class="fas fa-gamepad"></i>
+                                <p>游戏界面说明</p>
+                            </div>
+                        </div>
+                        <h2 class="guide-title">游戏界面介绍</h2>
+                        <div class="guide-description">
+                            <p>每个关卡的游戏界面包含以下区域：</p>
+                            <ul>
+                                <li><strong>目标区</strong>：显示当前关卡需要完成的目标任务</li>
+                                <li><strong>素材区</strong>：提供各种可拖拽的素材组件，包括HTML标签</li>
+                                <li><strong>编辑区</strong>：将素材按正确顺序拖拽到这里</li>
+                                <li><strong>预览区</strong>：实时查看编辑成果</li>
+                                <li><strong>提示区</strong>：当遇到困难时可以获取提示</li>
+                            </ul>
+                            <p>按照目标顺序拖拽素材到编辑区，顺序很重要！完成任务后点击提交按钮。</p>
+                        </div>
+                        <div class="guide-demo">
+                            <div class="guide-demo-title">操作流程</div>
+                            <div class="guide-demo-content">
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-images"></i>
+                                    <span>选择素材</span>
+                                </div>
+                                <i class="fas fa-arrow-right"></i>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-hand-rock"></i>
+                                    <span>按顺序拖拽</span>
+                                </div>
+                                <i class="fas fa-arrow-right"></i>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span>预览效果</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step" data-step="4">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <div class="guide-image-placeholder">
+                                <i class="fas fa-gift"></i>
+                                <p>奖励系统说明</p>
+                            </div>
+                        </div>
+                        <h2 class="guide-title">关卡系统与奖励</h2>
+                        <div class="guide-description">
+                            <p>游戏分为三大阶段，共15个关卡：</p>
+                            <ul>
+                                <li><strong>网站制作阶段</strong>：学习HTML/CSS基础，制作各类网站</li>
+                                <li><strong>Electron APP制作阶段</strong>：使用Electron框架开发桌面应用</li>
+                                <li><strong>.NET APP制作阶段</strong>：使用.NET技术开发Windows应用</li>
+                            </ul>
+                            <p>完成关卡可以获得积分、经验值、解锁新素材！完美通关（顺序完全正确）可获得额外奖励。</p>
+                        </div>
+                        <div class="guide-demo">
+                            <div class="guide-demo-title">奖励类型</div>
+                            <div class="guide-demo-content">
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-coins"></i>
+                                    <span>积分</span>
+                                </div>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>经验</span>
+                                </div>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-images"></i>
+                                    <span>素材</span>
+                                </div>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-medal"></i>
+                                    <span>徽章</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step" data-step="5">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <div class="guide-image-placeholder">
+                                <i class="fas fa-rocket"></i>
+                                <p>开始冒险</p>
+                            </div>
+                        </div>
+                        <h2 class="guide-title">准备开始</h2>
+                        <div class="guide-description">
+                            <p>你已经了解了HTML基础知识和游戏玩法。现在让我们开始编程冒险吧！</p>
+                            <p><strong>重要提示：</strong></p>
+                            <ul>
+                                <li>HTML文档有严格的顺序，必须按正确顺序放置标签</li>
+                                <li>从!DOCTYPE开始，然后是html、head、body</li>
+                                <li>每个关卡的目标都会告诉你需要使用哪些标签</li>
+                                <li>如果遇到困难，可以使用提示功能获取帮助</li>
+                            </ul>
+                            <p>按照关卡顺序逐步完成，你将掌握HTML、CSS和更多编程知识！</p>
+                        </div>
+                        <div class="guide-demo">
+                            <div class="guide-demo-title">准备好了吗？</div>
+                            <div class="guide-demo-content">
+                                <div class="guide-demo-item ready">
+                                    <i class="fas fa-check"></i>
+                                    <span>开始学习！</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step" id="electron-tutorial" style="display: none;">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <div class="guide-image-placeholder">
+                                <i class="fas fa-desktop"></i>
+                                <p>Electron开发</p>
+                            </div>
+                        </div>
+                        <h2 class="guide-title">欢迎来到 Electron APP 制作阶段</h2>
+                        <div class="guide-description">
+                            <p>Electron是一个使用HTML、CSS和JavaScript构建跨平台桌面应用的框架。</p>
+                            <p>在这个阶段，你将学习：</p>
+                            <ul>
+                                <li><strong>桌面应用结构</strong>：HTML页面作为应用界面</li>
+                                <li><strong>主进程与渲染进程</strong>：Electron的核心概念</li>
+                                <li><strong>原生API调用</strong>：访问系统功能</li>
+                                <li><strong>打包发布</strong>：将应用打包成可执行文件</li>
+                            </ul>
+                            <p>每个Electron应用都从HTML页面开始，所以你仍然需要先构建HTML结构！</p>
+                        </div>
+                        <div class="guide-demo">
+                            <div class="guide-demo-title">Electron应用结构</div>
+                            <div class="guide-demo-content">
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>HTML页面</span>
+                                </div>
+                                <i class="fas fa-arrow-right"></i>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-desktop"></i>
+                                    <span>桌面窗口</span>
+                                </div>
+                                <i class="fas fa-arrow-right"></i>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>系统API</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-step" id="dotnet-tutorial" style="display: none;">
+                    <div class="guide-card">
+                        <div class="guide-image">
+                            <div class="guide-image-placeholder">
+                                <i class="fas fa-window-maximize"></i>
+                                <p>.NET开发</p>
+                            </div>
+                        </div>
+                        <h2 class="guide-title">欢迎来到 .NET APP 制作阶段</h2>
+                        <div class="guide-description">
+                            <p>.NET是微软推出的跨平台开发框架，用于构建高性能的Windows应用程序。</p>
+                            <p>在这个阶段，你将学习：</p>
+                            <ul>
+                                <li><strong>Windows窗体应用</strong>：创建原生Windows界面</li>
+                                <li><strong>控件布局</strong>：按钮、文本框、菜单等</li>
+                                <li><strong>事件处理</strong>：响应用户操作</li>
+                                <li><strong>数据绑定</strong>：连接数据源</li>
+                            </ul>
+                            <p>虽然是.NET应用，但界面仍然使用HTML/CSS基础！</p>
+                        </div>
+                        <div class="guide-demo">
+                            <div class="guide-demo-title">.NET应用特点</div>
+                            <div class="guide-demo-content">
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-windows"></i>
+                                    <span>Windows原生</span>
+                                </div>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>高性能</span>
+                                </div>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-gem"></i>
+                                    <span>丰富控件</span>
+                                </div>
+                                <div class="guide-demo-item">
+                                    <i class="fas fa-link"></i>
+                                    <span>数据库集成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-navigation">
+                    <span class="guide-nav-info" id="guide-step-info">1 / 5</span>
+                    <button class="btn btn-secondary" id="guide-prev" style="visibility: hidden;">
+                        <i class="fas fa-arrow-left"></i> 上一步
+                    </button>
+                    <button class="btn btn-primary" id="guide-next">
+                        下一步 <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backBtn = document.getElementById('guide-back');
+            const skipBtn = document.getElementById('guide-skip');
+            
+            backBtn.addEventListener('click', function() {
+                Game.navigateTo('index.html');
+            });
+            
+            skipBtn.addEventListener('click', function() {
+                GameStorage.updateUserData({ settings: { ...GameStorage.getUserData().settings, showTutorial: false } });
+                Game.navigateTo('levels.html');
+            });
+            
+            initGuidePage();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通关结算 - Voidwryte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <button class="back-btn" onclick="Game.navigateTo('levels.html')">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="page-title">通关结算</h1>
+            <div class="page-actions">
+            </div>
+        </header>
+
+        <main class="page-content">
+            <div class="settlement-container">
+                <div class="settlement-card">
+                    <div class="settlement-icon success" id="settlement-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h2 class="settlement-title" id="settlement-title">通关成功！</h2>
+                    <p class="settlement-subtitle" id="settlement-subtitle">恭喜你完成了这个关卡</p>
+
+                    <div class="settlement-stats">
+                        <div class="settlement-stat">
+                            <div class="settlement-stat-value" id="settlement-score">+100</div>
+                            <div class="settlement-stat-label">获得积分</div>
+                        </div>
+                        <div class="settlement-stat">
+                            <div class="settlement-stat-value" id="settlement-items">3/4</div>
+                            <div class="settlement-stat-label">完成目标</div>
+                        </div>
+                        <div class="settlement-stat">
+                            <div class="settlement-stat-value" id="settlement-level">Lv.1</div>
+                            <div class="settlement-stat-label">当前等级</div>
+                        </div>
+                    </div>
+
+                    <div class="settlement-rewards">
+                        <div class="settlement-rewards-title">
+                            <i class="fas fa-gift"></i>
+                            <span>获得奖励</span>
+                        </div>
+                        <div class="rewards-list" id="rewards-list">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settlement-actions">
+                    <button class="btn btn-secondary" id="replay-btn">
+                        <i class="fas fa-redo"></i> 重玩
+                    </button>
+                    <button class="btn btn-primary" id="next-level-btn">
+                        <i class="fas fa-arrow-right"></i> 下一关
+                    </button>
+                </div>
+                <button class="btn btn-secondary" id="menu-btn" style="width: 100%; margin-top: 1rem;">
+                    <i class="fas fa-list"></i> 返回关卡列表
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initSettlementPage();
+        });
+    </script>
+</body>
+</html>

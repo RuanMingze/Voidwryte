@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voidwryte - 编程主题休闲游戏</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#16213e">
+    <meta name="description" content="一款面向零基础编程学习者的编程主题休闲游戏">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%231a1a2e' width='512' height='512' rx='64'/><text x='256' y='320' font-size='280' text-anchor='middle' fill='%23e94560'>V</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader-container">
+            <div class="code-loader">
+                <span class="code-char">&lt;</span>
+                <span class="code-char">/</span>
+                <span class="code-char">V</span>
+                <span class="code-char">o</span>
+                <span class="code-char">i</span>
+                <span class="code-char">d</span>
+                <span class="code-char">w</span>
+                <span class="code-char">r</span>
+                <span class="code-char">y</span>
+                <span class="code-char">t</span>
+                <span class="code-char">e</span>
+                <span class="code-char">&gt;</span>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loading-bar"></div>
+            </div>
+            <p class="loading-text" id="loading-text">正在初始化开发环境...</p>
+        </div>
+    </div>
+
+    <div id="main-menu" class="hidden">
+        <div class="background-effects">
+            <div class="matrix-rain" id="matrix-rain"></div>
+            <div class="floating-code">
+                <span class="code-snippet">{ }</span>
+                <span class="code-snippet">&lt;/&gt;</span>
+                <span class="code-snippet">( )</span>
+                <span class="code-snippet">[ ]</span>
+                <span class="code-snippet">=&gt;</span>
+                <span class="code-snippet">++</span>
+                <span class="code-snippet">/* */</span>
+                <span class="code-snippet">===</span>
+            </div>
+        </div>
+
+        <header class="game-header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h1 class="game-title">Voidwryte</h1>
+                <p class="game-subtitle">编程主题休闲游戏</p>
+            </div>
+        </header>
+
+        <main class="menu-content">
+            <section class="intro-section">
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h2>欢迎来到编程世界</h2>
+                    <p>通过游戏化方式学习编程知识，从制作网站到开发APP，开启你的编程之旅</p>
+                    <div class="feature-tags">
+                        <span class="tag"><i class="fas fa-graduation-cap"></i> 新手友好</span>
+                        <span class="tag"><i class="fas fa-gamepad"></i> 游戏化学习</span>
+                        <span class="tag"><i class="fas fa-trophy"></i> 丰富奖励</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-buttons">
+                <button class="menu-btn primary-btn" id="btn-start-game">
+                    <span class="btn-icon"><i class="fas fa-play"></i></span>
+                    <span class="btn-text">开始游戏</span>
+                </button>
+                <button class="menu-btn secondary-btn" id="btn-tutorial">
+                    <span class="btn-icon"><i class="fas fa-book-open"></i></span>
+                    <span class="btn-text">新手引导</span>
+                </button>
+                <button class="menu-btn secondary-btn" id="btn-levels">
+                    <span class="btn-icon"><i class="fas fa-layer-group"></i></span>
+                    <span class="btn-text">关卡选择</span>
+                </button>
+                <button class="menu-btn secondary-btn" id="btn-rewards">
+                    <span class="btn-icon"><i class="fas fa-gift"></i></span>
+                    <span class="btn-text">奖励任务</span>
+                </button>
+                <button class="menu-btn secondary-btn" id="btn-profile">
+                    <span class="btn-icon"><i class="fas fa-user"></i></span>
+                    <span class="btn-text">个人中心</span>
+                </button>
+                <div class="secondary-buttons-row">
+                    <button class="menu-btn small-btn" id="btn-leaderboard">
+                        <span class="btn-icon"><i class="fas fa-crown"></i></span>
+                        <span class="btn-text">排行榜</span>
+                    </button>
+                    <button class="menu-btn small-btn" id="btn-settings">
+                        <span class="btn-icon"><i class="fas fa-cog"></i></span>
+                        <span class="btn-text">设置</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="game-stats" id="game-stats">
+                <div class="stat-item">
+                    <i class="fas fa-layer-group"></i>
+                    <span class="stat-value" id="stat-levels-completed">0</span>
+                    <span class="stat-label">已通关关卡</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-value" id="stat-total-score">0</span>
+                    <span class="stat-label">总积分</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-medal"></i>
+                    <span class="stat-value" id="stat-achievements">0</span>
+                    <span class="stat-label">成就徽章</span>
+                </div>
+            </section>
+        </main>
+
+        <footer class="game-footer">
+            <p>Voidwryte v1.0 | 让编程变得有趣</p>
+        </footer>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            GameLoader.init();
+        });
+    </script>
+</body>
+</html>

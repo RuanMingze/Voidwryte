@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排行榜 - Voidwryte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <button class="back-btn" onclick="Game.navigateTo('index.html')">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h1 class="page-title">排行榜</h1>
+            <div class="page-actions">
+            </div>
+        </header>
+
+        <main class="page-content">
+            <div class="leaderboard-container">
+                <div class="leaderboard-tabs">
+                    <button class="leaderboard-tab active" data-tab="global">
+                        <i class="fas fa-globe"></i> 全球榜
+                    </button>
+                    <button class="leaderboard-tab" data-tab="weekly">
+                        <i class="fas fa-fire"></i> 本周榜
+                    </button>
+                    <button class="leaderboard-tab" data-tab="friends">
+                        <i class="fas fa-user-friends"></i> 好友榜
+                    </button>
+                </div>
+
+                <div class="leaderboard-list" id="leaderboard-list">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initLeaderboardPage();
+        });
+    </script>
+</body>
+</html>

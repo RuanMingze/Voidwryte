@@ -1,0 +1,21 @@
+{
+    "name": "Voidwryte - 编程主题休闲游戏",
+    "short_name": "Voidwryte",
+    "description": "一款面向零基础编程学习者的编程主题休闲游戏",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#1a1a2e",
+    "theme_color": "#16213e",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%231a1a2e' width='512' height='512' rx='64'/><text x='256' y='320' font-size='280' text-anchor='middle' fill='%23e94560'>V</text></svg>",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["games", "education"],
+    "lang": "zh-CN",
+    "prefer_related_applications": false
+}
